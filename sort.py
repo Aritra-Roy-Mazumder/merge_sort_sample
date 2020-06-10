@@ -1,14 +1,15 @@
 import random
-
+import strings
 
 def create_list():
-    list_len = int(input("Enter how long you want your data set to be: "))
-    list = []
-    for x in range(list_len):
-        pick = random.randint(1, list_len)
-        list.append(pick)
-    print(list)
-    return list
+    lst_len = int(input("Enter how long you want your data set to be: "))
+    lst = []
+    for x in range(lst_len):
+        pick = random.randint(1, lst_len)
+        lst.append(pick)
+    # print(lst)
+    print(strings.commas(len(lst)))
+    return lst
 
 
 def merge_sort(working_list):
@@ -47,6 +48,5 @@ def merge_sort(working_list):
                 working_list[index] = sublist_right[index_right]
                 index_right += 1
                 index += 1
-
     return working_list
 
